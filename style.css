@@ -1,0 +1,209 @@
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #f0f4f8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Open Sans', sans-serif;
+  padding: 40px 20px;
+}
+
+.coupon-wrapper {
+  max-width: 700px;
+  width: 100%;
+}
+
+.coupon {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.13);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Header azul de la marca */
+.coupon-header {
+  background: linear-gradient(135deg, #1a3a6b 0%, #1e5aad 100%);
+  padding: 28px 36px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.coupon-header img.logo {
+  height: 52px;
+  filter: brightness(0) invert(1);
+}
+
+.coupon-header .badge {
+  background: #e63022;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
+/* Cuerpo principal */
+.coupon-body {
+  padding: 36px 36px 28px;
+  text-align: center;
+}
+
+.offer-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #1e5aad;
+  margin-bottom: 10px;
+}
+
+.discount-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80px;
+  font-weight: 800;
+  color: #1a3a6b;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.discount-value sup {
+  font-size: 36px;
+  vertical-align: super;
+  color: #e63022;
+}
+
+.offer-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.offer-description strong {
+  color: #1a3a6b;
+}
+
+/* Línea de separación dentada */
+.perforation {
+  position: relative;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  margin: 0 -1px;
+}
+
+.perforation::before,
+.perforation::after {
+  content: '';
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  background: #f0f4f8;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.perforation::before { left: -14px; }
+.perforation::after  { right: -14px; }
+
+.perforation-line {
+  flex: 1;
+  border-top: 2px dashed #d0d9e8;
+  margin: 0 28px;
+}
+
+/* Código del cupón */
+.coupon-code-section {
+  padding: 22px 36px 30px;
+  text-align: center;
+}
+
+.code-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.code-box {
+  display: inline-block;
+  background: #f0f4f8;
+  border: 2px dashed #1e5aad;
+  border-radius: 10px;
+  padding: 12px 36px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a3a6b;
+  letter-spacing: 6px;
+  margin-bottom: 16px;
+}
+
+.validity {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #e63022 0%, #c0281c 100%);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(230,48,34,0.35);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(230,48,34,0.45);
+}
+
+/* Footer */
+.coupon-footer {
+  background: #1a3a6b;
+  padding: 14px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.coupon-footer p {
+  font-size: 11px;
+  color: rgb(255,255,255);
+  line-height: 1.5;
+}
+
+.coupon-footer .terms {
+  font-size: 10px;
+  color: rgb(255, 255, 255);
+  text-align: right;
+}
